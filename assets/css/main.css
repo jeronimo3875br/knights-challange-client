@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+:root {
+  --primaryColor: #212121;
+  --secondaryColor: #303030;
+  --tertiaryColor: #50C878;
+  --quaternaryColor: #808080;
+  --quintanaryColor: #ffffff;
+  --tertiaryColor-actived: #3fa461;
+}
