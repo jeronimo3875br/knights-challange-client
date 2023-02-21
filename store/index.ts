@@ -146,11 +146,14 @@ export const mutations: MutationTree<RootState> = {
 };
 
 export const actions: ActionTree<RootState, RootState> = {
-  async createKnight({ commit, dispatch }, { knight, image }: { knight: IKnight, image: FormData }) {
+  async createKnight({ commit, dispatch }, { knight, image }: { knight: IKnight, image?: FormData }) {
     try {
       commit("setKnightsLoad", true);
-      const uploadImage = await this.$axios.post("/upload", image);
-      knight.image = uploadImage.data.data.url;
+
+      if (image){
+        const uploadImage = await this.$axios.post("/upload", image);
+        knight.image = uploadImage.data.data.url;
+      }
 
       await this.$axios.post("/knights", knight);
 

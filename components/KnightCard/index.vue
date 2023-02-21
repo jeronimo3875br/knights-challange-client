@@ -69,7 +69,7 @@
             alt="smilling-icon"
           />
         </KnightField>
-        <KnightField name="Charism" :value="experience">
+        <KnightField name="Experience" :value="experience">
           <img
             class="knight-field-icon"
             src="@/assets/icons/experience.png"

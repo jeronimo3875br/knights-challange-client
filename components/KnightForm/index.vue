@@ -39,6 +39,7 @@
         v-model="knight.name"
         type="text"
         placeholder="Knight name"
+        required
       />
     </div>
     <div class="create-knight-form-field-group">
@@ -50,6 +51,7 @@
           v-model="knight.nickname"
           type="text"
           placeholder="Knight nickname"
+          required
         />
       </div>
       <div class="create-knight-form-field">
@@ -58,12 +60,13 @@
           v-model="knight.birthday"
           type="text"
           placeholder="Birthday"
+          required
         />
       </div>
     </div>
     <div class="create-knight-form-field">
       <label>KeyAttribute*</label>
-      <select v-model="knight.keyAttribute">
+      <select v-model="knight.keyAttribute" required>
         <option value="intelligence">Intelligence</option>
         <option value="strength">Strength</option>
         <option value="dexterity">Dexterity</option>
@@ -80,6 +83,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -90,6 +94,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -100,6 +105,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -110,6 +116,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -120,6 +127,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -130,6 +138,7 @@
           type="range"
           min="0"
           max="100"
+          required
           @input="setSliderStage($event)"
         />
     </div>
@@ -151,6 +160,7 @@
           v-model="knight.weapons[index].mod"
           type="number"
           placeholder="Knight nickname"
+          required
         />
       </div>
       <div class="create-knight-form-additional">
